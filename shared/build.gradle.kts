@@ -34,6 +34,9 @@ kotlin {
             implementation(libs.ktor.serialization.kotlinx.json)
             implementation(libs.kotlinx.serialization.json)
         }
+        dependencies {
+            implementation(libs.ktor.client.darwin)
+        }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
         }
@@ -57,3 +60,4 @@ android {
         targetCompatibility = JavaVersion.VERSION_11
     }
 }
+
