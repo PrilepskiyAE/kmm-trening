@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidLibrary)
     kotlin("plugin.serialization") version "1.8.21"
+    id("org.jetbrains.compose") version "1.6.10-beta02"
 }
 
 kotlin {
@@ -26,6 +27,12 @@ kotlin {
 
     sourceSets {
         commonMain.dependencies {
+            implementation(compose.runtime)
+            implementation(compose.foundation)
+            implementation(compose.material)
+            @OptIn(org.jetbrains.compose.ExperimentalComposeLibrary::class)
+            implementation(compose.components.resources)
+
             api(libs.mvvm.core)
             api(libs.mvvm.compose)
             implementation(libs.kamel.image)
@@ -35,7 +42,7 @@ kotlin {
             implementation(libs.kotlinx.serialization.json)
         }
         dependencies {
-            implementation(libs.ktor.client.darwin)
+           // implementation(libs.ktor.client.darwin)
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
