@@ -57,13 +57,13 @@ fun MainScreen(mainViewModel:MainViewModel) {
         }
         AnimatedVisibility(uiState.selectedImages.isNotEmpty()) {
             LazyVerticalGrid(
-                columns = GridCells.Fixed(2),
+                columns = GridCells.Fixed(3),
                 horizontalArrangement = Arrangement.spacedBy(5.dp),
                 verticalArrangement = Arrangement.spacedBy(5.dp),
                 modifier = Modifier.fillMaxSize().padding(horizontal = 5.dp),
                 content = {
                     items(uiState.selectedImages) {
-                        BirdImageCell(it)
+                        ImageCell(it)
                     }
                 }
             )
@@ -72,7 +72,7 @@ fun MainScreen(mainViewModel:MainViewModel) {
 }
 
 @Composable
-fun BirdImageCell(image: ImageModel) {
+fun ImageCell(image: ImageModel) {
     KamelImage(
         asyncPainterResource("https://sebastianaigner.github.io/demo-image-api/${image.path}"),
         "${image.category} by ${image.author}",
