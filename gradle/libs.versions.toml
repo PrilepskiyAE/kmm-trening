@@ -3,6 +3,7 @@ agp = "8.3.2"
 kamelImage = "0.6.0"
 kotlin = "1.9.20"
 compose = "1.5.4"
+jetBrainCompose="1.6.10-beta02"
 compose-compiler = "1.5.4"
 compose-material3 = "1.1.2"
 androidx-activityCompose = "1.8.0"
@@ -50,6 +51,8 @@ kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref =
 hiltAndroidPlugin = { id = "com.google.dagger.hilt.android", version.ref = "hilt-android" }
 kotlinCocoapods = { id = "org.jetbrains.kotlin.native.cocoapods", version.ref = "kotlin" }
 org-jetbrains-kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "org-jetbrains-kotlin-android" }
+kotlinSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+jetbrainsCompose = { id = "org.jetbrains.compose", version.ref = "jetBrainCompose" }
 
 
 

@@ -6,4 +6,5 @@ plugins {
     alias(libs.plugins.kotlinMultiplatform).apply(false)
     alias(libs.plugins.hiltAndroidPlugin).apply(false)
     alias(libs.plugins.org.jetbrains.kotlin.kapt) apply false
+    alias(libs.plugins.kotlinSerialization).apply(false)
 }
