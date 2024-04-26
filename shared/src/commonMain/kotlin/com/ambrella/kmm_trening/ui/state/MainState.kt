@@ -10,5 +10,8 @@ interface MainState : State {
     data class Data(
         val images: List<ImageModel> = emptyList(),
         val selectedCategory: String = emptyString()
-    ):MainState
+    ) : MainState {
+        val categories = images.map { it.category }.toSet()
+        val selectedImages = images.filter { it.category == selectedCategory }
+    }
 }
